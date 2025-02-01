@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Value Picker</title>
+    <title>Sims 2 Legacy Randomizer</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
         button { font-size: 16px; padding: 10px; cursor: pointer; }
@@ -16,9 +16,9 @@
     <div id="results"></div>
 
     <script>
-        const pool1 = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
-        const pool2 = ['Cat', 'Dog', 'Elephant', 'Falcon', 'Giraffe'];
-        const pool3 = ['Red', 'Blue', 'Green', 'Yellow', 'Purple'];
+        const pool1 = ['Popularity', 'Family', 'Romance', 'Knowledge', 'Pleasure', 'Wealth'];
+        const pool2 = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+        const pool3 = ['Show Business', 'Intelligence*', 'Education', 'Adventurer', 'Artist', 'Entertainment', 'Oceanography*', 'Journalism', 'Music', 'Natural Scientist', 'Gamer', 'Law', 'Paranormal', 'Architecture', 'Athletic', 'Dance', 'Business', 'Criminal', 'Science', 'Culinary', 'Medicine', 'Politics', 'Law Enforcement', 'Military', 'Slacker'];
 
         function getRandomValue(pool) {
             return pool[Math.floor(Math.random() * pool.length)];
@@ -30,7 +30,7 @@
             const value3 = getRandomValue(pool3);
             
             document.getElementById('results').innerHTML = 
-                `Pool 1: ${value1} <br> Pool 2: ${value2} <br> Pool 3: ${value3}`;
+                `Aspiration: ${value1} <br> Birthsign: ${value2} <br> Job: ${value3}`;
         }
     </script>
 </body>
