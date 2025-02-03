@@ -7,17 +7,24 @@
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
         button { font-size: 16px; padding: 10px; cursor: pointer; margin: 5px; }
-        #results, #results2 { margin-top: 20px; font-size: 20px; }
+        .results-container { display: flex; justify-content: center; gap: 50px; margin-top: 20px; }
+        .results-box { text-align: left; font-size: 20px; }
         .pool-label { font-family: 'Verdana', sans-serif; font-weight: bold; }
         .pool-value { font-family: Arial; }
     </style>
 </head>
 <body>
     <h1>Sims 2 Legacy Randomizer</h1>
-    <button onclick="generateValues()">Legacy Character</button>
-    <button onclick="generateSecondValues()">Biology</button>
-    <div id="results"></div>
-    <div id="results2"></div>
+    
+    <div>
+        <button onclick="generateValues()">Legacy Sim Bio</button>
+        <div id="results" class="results-box"></div>
+    </div>
+    
+    <div>
+        <button onclick="generateSecondValues()">Secondary Traits</button>
+        <div id="results2" class="results-box"></div>
+    </div>
 
     <script>
         const pool1 = ['Popularity', 'Family', 'Romance', 'Knowledge', 'Pleasure', 'Wealth'];
